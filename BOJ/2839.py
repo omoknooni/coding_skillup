@@ -1,4 +1,6 @@
 n = int(input())
+
+# DP
 MAX = 100000000
 dp = [0] * (n+1) if n>=5 else [0,0,0,0,0,0]
 dp[0] = MAX
@@ -18,3 +20,16 @@ if dp[n] == MAX:
     print(-1)
 else:
     print(dp[n])
+
+
+# GREEDY
+# cnt = 0
+# while n >= 0:
+#     if n % 5 == 0:          # 5로 나눠떨어지면 5kg만으로 구성됨
+#         cnt += (n // 5)
+#         print(cnt)
+#         break
+#     n -= 3                  # 3kg 1봉지 추가
+#     cnt += 1
+# else:
+#     print(-1)
